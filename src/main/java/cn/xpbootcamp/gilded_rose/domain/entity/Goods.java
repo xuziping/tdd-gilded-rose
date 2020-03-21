@@ -1,16 +1,12 @@
 package cn.xpbootcamp.gilded_rose.domain.entity;
 
-public abstract class Goods {
+public interface Goods {
 
-    private Integer sellIn;
+    String getName();
 
-    private Integer quality;
+    Integer getSellIn();
 
-    public Integer getSellIn() {
-        return sellIn;
-    }
+    Integer getOriginalQuality();
 
-    public Integer getQuality() {
-        return quality;
-    }
+    Integer calQuality(Integer days);
 }
