@@ -4,7 +4,7 @@ public class SulfurasGoods implements Goods {
 
     @Override
     public Integer calQuality(Integer days) {
-        return null;
+        return 0;
     }
 
     @Override
@@ -14,11 +14,11 @@ public class SulfurasGoods implements Goods {
 
     @Override
     public Integer getSellIn() {
-        return null;
+        return 0;
     }
 
     @Override
     public Integer getOriginalQuality() {
-        return null;
+        return 0;
     }
 }

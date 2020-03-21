@@ -4,7 +4,7 @@ public class AgedBrieGoods implements Goods {
 
     @Override
     public Integer calQuality(Integer days) {
-        return null;
+        return getOriginalQuality() + days * 1;
     }
 
     @Override
@@ -14,11 +14,11 @@ public class AgedBrieGoods implements Goods {
 
     @Override
     public Integer getSellIn() {
-        return null;
+        return 10;
     }
 
     @Override
     public Integer getOriginalQuality() {
-        return null;
+        return 10;
     }
 }
