@@ -17,7 +17,7 @@ public class BackstagePassGoods implements Goods {
         for (int currentDay = getSellIn() - 5; currentDay <= days && currentDay < getSellIn(); currentDay++) {
             quality += 3;
         }
-        return quality;
+        return quality > 50 ? 50 : quality;
     }
 
     @Override

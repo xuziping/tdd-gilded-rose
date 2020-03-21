@@ -4,7 +4,8 @@ public class AgedBrieGoods implements Goods {
 
     @Override
     public Integer calQuality(Integer days) {
-        return getOriginalQuality() + days * 1;
+        Integer quality = getOriginalQuality() + days * 1;
+        return quality > 50 ? 50 : quality;
     }
 
     @Override
