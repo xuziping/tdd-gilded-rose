@@ -2,19 +2,21 @@ package cn.xpbootcamp.gilded_rose.domain.entity;
 
 public class BackstagePassGoods implements Goods {
 
+    private static final Integer START_DAY = 1;
+
     @Override
     public Integer calQuality(Integer days) {
-        if (days > getOriginalQuality()) {
+        if (days > getSellIn()) {
             return 0;
         }
         int quality = getOriginalQuality();
-        for (int currentDay = 0; currentDay <= days && currentDay < getSellIn() - 10; currentDay++) {
+        for (int currentDay = START_DAY; currentDay <= days && currentDay <= getSellIn() - 10; currentDay++) {
             quality += 1;
         }
-        for (int currentDay = getSellIn() - 10; currentDay <= days && currentDay < getSellIn() - 5; currentDay++) {
+        for (int currentDay = getSellIn() - 9; currentDay <= days && currentDay <= getSellIn() - 5; currentDay++) {
             quality += 2;
         }
-        for (int currentDay = getSellIn() - 5; currentDay <= days && currentDay < getSellIn(); currentDay++) {
+        for (int currentDay = getSellIn() - 4; currentDay <= days && currentDay <= getSellIn(); currentDay++) {
             quality += 3;
         }
         return quality > 50 ? 50 : quality;
